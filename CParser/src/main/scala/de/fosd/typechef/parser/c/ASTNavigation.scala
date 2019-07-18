@@ -144,10 +144,10 @@ trait ASTNavigation {
     // in contrast to filterASTElems, filterAllASTElems visits all elements of the tree-wise input structure
     def filterAllASTElems[T <: AST](a: Any)(implicit m: ClassTag[T]): List[T] = {
         a match {
-            case p: Product if (m.runtimeClass.isInstance(p)) => List(p.asInstanceOf[T]) ++
-                p.productIterator.toList.flatMap(filterAllASTElems[T])
-            case l: List[_] => l.flatMap(filterAllASTElems[T])
-            case p: Product => p.productIterator.toList.flatMap(filterAllASTElems[T])
+            case p: Product if (m.runtimeClass.isInstance(p)) => {println(s"cond $p"); List(p.asInstanceOf[T]) ++
+                p.productIterator.toList.flatMap(filterAllASTElems[T]); }
+            case l: List[_] => { println(s"list $l"); l.flatMap(filterAllASTElems[T])}
+            case p: Product => {println(s"nocond, $p"); p.productIterator.toList.flatMap(filterAllASTElems[T])}
             case _ => List()
         }
     }

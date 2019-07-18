@@ -48,11 +48,13 @@ class CInterAnalysisFrontend(tunit: TranslationUnit, fm: FeatureModel = FeatureE
     }
 
     def writeFuncs() {
-        val env = CASTEnv.createASTEnv(tunit)
-        println(tunit)
-        //val allelems = filterAllASTElems[AST](tunit)
-        //for (f <- allelems)
-        //    println(f)
+        //val env = CASTEnv.createASTEnv(tunit)
+        //println(tunit)
+        //println("-------")
+
+        val allelems = filterAllASTElems[AST](tunit)
+        for (f <- allelems)
+            println(f)
     }
 
 }
