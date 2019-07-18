@@ -22,6 +22,7 @@ public class FrontendOptions extends CAnalysisOptions implements ParserOptions {
             decluse = false,
             writeInterface = false,
             dumpcfg = false,
+            dumpfuncs = false,
             serializeAST = false,
             reuseAST = false,
             writeDebugInterface = false,
@@ -43,6 +44,7 @@ public class FrontendOptions extends CAnalysisOptions implements ParserOptions {
     private final static char F_WRITEPI = Options.genOptionId();
     private final static char F_DEBUGINTERFACE = Options.genOptionId();
     private final static char F_DUMPCFG = Options.genOptionId();
+    private final static char F_DUMPFUNCS = Options.genOptionId();
     private final static char F_SERIALIZEAST = Options.genOptionId();
     private final static char F_REUSEAST = Options.genOptionId();
     private final static char F_RECORDTIMING = Options.genOptionId();
@@ -74,6 +76,9 @@ public class FrontendOptions extends CAnalysisOptions implements ParserOptions {
 
                 new Option("dumpcfg", LongOpt.NO_ARGUMENT, F_DUMPCFG, null,
                         "Lex, parse, and dump control flow graph"),
+
+                new Option("dumpfuncs", LongOpt.NO_ARGUMENT, F_DUMPFUNCS, null,
+                        "Lex, parse, and dump functions affected by Macros"),
 
                 new Option("output", LongOpt.REQUIRED_ARGUMENT, 'o', "file",
                         "Path to output files (no extension, creates .pi, .macrodbg etc files)."),
@@ -135,6 +140,8 @@ public class FrontendOptions extends CAnalysisOptions implements ParserOptions {
             parse = typecheck = writeInterface = true;
         } else if (c == F_DUMPCFG) {
             parse = dumpcfg = true;
+        } else if (c == F_DUMPFUNCS) {
+            parse = dumpfuncs = true;
         } else if (c == F_SERIALIZEAST) {
             serializeAST = true;
         } else if (c == F_REUSEAST) {

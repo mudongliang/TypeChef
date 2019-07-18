@@ -188,6 +188,14 @@ object Frontend extends EnforceTreeHelper {
                     val dotwriter = new DotGraph(new FileWriter(new File(opt.getCCFGDotFilename)))
                     cf.writeCFG(opt.getFile, new ComposedWriter(List(dotwriter, writer)))
                 }
+                if (opt.dumpfuncs) {
+                    println("#call graph")
+                    stopWatch.start("dumpFuncs")
+
+                    //run without feature model, because otherwise too expensive runtimes in systems such as linux
+                    val cf = new CInterAnalysisFrontend(ast/*, fm_ts*/)
+                    cf.writeFuncs()
+                }
 
                 if (opt.staticanalyses) {
                     println("#static analysis")

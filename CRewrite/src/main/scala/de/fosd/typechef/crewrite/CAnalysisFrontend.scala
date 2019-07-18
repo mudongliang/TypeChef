@@ -31,6 +31,9 @@ class CInterAnalysisFrontend(tunit: TranslationUnit, fm: FeatureModel = FeatureE
             case _ => FeatureExprFactory.True
         }
 
+        val allelems = filterAllASTElems[AST](tunit)
+        for (f <- allelems)
+            println(f)
 
         for (f <- fdefs) {
             writer.writeMethodGraph(getAllSucc(f, env).map {
@@ -43,6 +46,15 @@ class CInterAnalysisFrontend(tunit: TranslationUnit, fm: FeatureModel = FeatureE
         if (writer.isInstanceOf[StringWriter])
             println(writer.toString)
     }
+
+    def writeFuncs() {
+        val env = CASTEnv.createASTEnv(tunit)
+        println(tunit)
+        //val allelems = filterAllASTElems[AST](tunit)
+        //for (f <- allelems)
+        //    println(f)
+    }
+
 }
 
 // TODO: refactoring different dataflow analyses into a composite will reduce code: handling of invalid paths, error printing ...

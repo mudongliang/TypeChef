@@ -1,7 +1,9 @@
-rm Frontend/target/*.jar
+#!/bin/bash
+ 
+#java -Xmx512M -Xss10m -jar sbt-launch.jar clean
+
+java -Xmx512M -Xss10m -jar sbt-launch.jar update compile
+
 sbt assembly
-cp TypeChef*.jar deploy
-git checkout gh-pages
-git add deploy/*.jar
-git commit -m "deployed new .jar file"
-git checkout master
+
+cp TypeChef*.jar ../
