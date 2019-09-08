@@ -1528,6 +1528,11 @@ public class Preprocessor extends DebuggingPreprocessor implements Closeable, VA
     private boolean include(VirtualFile file) throws IOException,
             LexerException {
         // System.out.println("Try to include " + file);
+        // if(file.getPath().contains("usr")){
+        //     System.out.println("Skip this file " + file);
+        //     return true;
+        // }
+            
         if (!file.isFile())
             return false;
         if (getFeature(Feature.DEBUG_VERBOSE))

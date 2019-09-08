@@ -194,7 +194,7 @@ object Frontend extends EnforceTreeHelper {
 
                     //run without feature model, because otherwise too expensive runtimes in systems such as linux
                     val cf = new CInterAnalysisFrontend(ast/*, fm_ts*/)
-                    cf.writeFuncs()
+                    cf.writeFuncs(opt.getOutputFilename)
                 }
 
                 if (opt.staticanalyses) {

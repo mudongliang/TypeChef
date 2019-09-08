@@ -1,0 +1,1 @@
+java -Xmx48G -Xss1G -jar TypeChef.jar --platfromHeader platform.h --include partial_config.h --bdd --dumpfuncs --dumpcfg --lexdebug --lexNoStdout --writePI --output=debug --openFeat=openfeatures.txt -I /usr/local/include -I /usr/include -I /usr/lib/gcc/x86_64-redhat-linux/4.8.2/include/ -I ./fuzzing/libxml2/libxml2/include ~/guojian/fuzzing/libxml2/libxml2/xmlIO.c > out 2>&1

@@ -1,0 +1,356 @@
+grep:1:CTypeChecker/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:1306:/home/binpang/guojian/reproduce/TypeChef/CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CDeclTyping.scala -> foldLeft
+grep:2:CTypeChecker/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:1684:/home/binpang/guojian/reproduce/TypeChef/CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CDeclUse.scala -> foldLeft
+grep:3:CTypeChecker/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:1950:/home/binpang/guojian/reproduce/TypeChef/CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CEnv.scala -> foldLeft
+grep:4:CTypeChecker/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:2498:/home/binpang/guojian/reproduce/TypeChef/CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CExprTyping.scala -> vfoldLeft
+grep:5:CTypeChecker/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:3570:/home/binpang/guojian/reproduce/TypeChef/CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CTypes.scala -> foldLeft
+grep:6:CTypeChecker/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:4074:/home/binpang/guojian/reproduce/TypeChef/CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/linker/CInterface.scala -> foldLeft
+grep:15:CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CEnv.scala:33:            updateVarEnv(vars.foldLeft(varEnv)((ve, v) => ve.+(v._1, v._2, v._3, v._4, v._5, scope, v._6)))
+grep:16:CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CEnv.scala:35:            updateVarEnv(vars.foldLeft(varEnv)((ve, v) => ve.+(v._1, v._2, v._3, v._4, v._5, scope, v._6)))
+grep:17:CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CEnv.scala:37:            updateVarEnv(vars.foldLeft(varEnv)((ve, v) => ve.+(v._1, v._2, v._3, v._4, kind, scope, linkage)))
+grep:18:CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CExprTyping.scala:224:                        ConditionalLib.vfoldLeft(opList, et(expr), featureExpr,
+grep:19:CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CDeclTyping.scala:538:        specifiers.filter(_.entry == specifier).foldLeft(FeatureExprFactory.False)((f, o) => f or o.condition)
+grep:20:CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/linker/CInterface.scala:288:        getConflicts(that).foldLeft(FeatureExprFactory.True)(_ and _._2)
+grep:21:CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/linker/CInterface.scala:370:        val formula = featureModel implies pairs.foldLeft(True)((a, b) => a and (b._1 mex b._2))
+grep:22:CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/linker/CInterface.scala:417:    private def disjointSigFeatureExpr(a: Seq[CSignature]): FeatureExpr = a.foldLeft(False)(_ or _.fexpr)
+grep:23:CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/linker/CInterface.scala:433:    //            a.foldLeft(False)(_ or _.fexpr) mex b.foldLeft(False)(_ or _.fexpr)
+grep:24:CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CTypes.scala:605:        v.foldLeft(this)((c, x) => c.+(x._1, x._2, x._3, x._4, x._5, x._6, x._7))
+grep:25:CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CTypeSystem.scala:492:    //    //            val condition = callerFeature.implies(targets.map(_.feature).foldLeft(FeatureExprFactory.True.not)(_.or(_)))
+grep:26:CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CDeclUse.scala:648:                            if (feature.implies(tupleVariableDef.foldLeft(FeatureExprFactory.False)((a, b) => a.or(b._1))).isTautology) {
+grep:28:CRewrite/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:2082:/home/binpang/guojian/reproduce/TypeChef/CRewrite/src/main/scala/de/fosd/typechef/crewrite/MonotoneFW.scala -> foldLeft
+grep:30:CRewrite/src/main/scala/de/fosd/typechef/crewrite/MonotoneFW.scala:211:                fl.foldLeft[L](b)((r: L, s: Opt[AST]) => combinationOperator(r, updateFeatureExprOfMonotoneElements(point(s.entry), s.condition)))
+grep:31:CRewrite/src/test/scala/de/fosd/typechef/crewrite/CoarseVariability.scala:64://        l.foldLeft(List[Opt[T]]())({
+grep:32:CParser/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:1375:/home/binpang/guojian/reproduce/TypeChef/CParser/src/main/scala/de/fosd/typechef/parser/c/CASTContext.scala -> foldLeft
+grep:33:CParser/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:2527:/home/binpang/guojian/reproduce/TypeChef/CParser/src/main/scala/de/fosd/typechef/parser/c/ParserMain.scala -> foldLeft
+grep:34:CParser/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:2880:/home/binpang/guojian/reproduce/TypeChef/CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala -> foldLeft
+grep:38:CParser/src/main/scala/de/fosd/typechef/parser/c/CASTContext.scala:27:    def featureExpr(elem: Any) = featureSet(elem).foldLeft(FeatureExprFactory.True)(_ and _)
+grep:39:CParser/src/main/scala/de/fosd/typechef/parser/c/ParserMain.scala:220:        tokens.foldLeft[Set[FeatureExpr]](Set())(_ + _.getFeature).size
+grep:40:CParser/src/main/scala/de/fosd/typechef/parser/c/ParserMain.scala:248:        case l: List[Any] => l.foldLeft[Int](0)(_ + countCoices(_, ctx))
+grep:41:CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:128:            list_feature_expr.foldLeft(FeatureExprFactory.True)(_ and _).implies(e.condition).isTautology())
+grep:42:CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:146:            list_feature_expr.foldLeft(FeatureExprFactory.True)(_ and _).implies(e.condition).isTautology())
+grep:43:CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:213:            l.drop(1).foldLeft(r)((a, b) => s(a, prettyOpt(b)))
+grep:44:CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:217:            l.drop(1).foldLeft(r)(s(_, _))
+grep:45:CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:247:                        list_feature_expr.foldLeft(FeatureExprFactory.True)(_ and _).implies(optExprPair.condition).isTautology()) {
+grep:46:CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:269:                        foldLeft[Doc]
+grep:47:CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:295:                        foldLeft[Doc]
+grep:48:ParserFramework/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:243:/home/binpang/guojian/reproduce/TypeChef/ParserFramework/src/main/scala/de/fosd/typechef/parser/AbstractToken.scala -> foldLeft
+grep:49:ParserFramework/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:525:/home/binpang/guojian/reproduce/TypeChef/ParserFramework/src/main/scala/de/fosd/typechef/parser/MultiFeatureParser.scala -> foldLeft
+grep:54:ParserFramework/src/main/scala/de/fosd/typechef/parser/AbstractToken.scala:54:    def totalConsumed[T <: ProfilingToken, U](in: TokenReader[T, U]) = in.tokens.foldLeft(0)((sum, token) => sum + token.profile_consumed)
+grep:55:ParserFramework/src/main/scala/de/fosd/typechef/parser/AbstractToken.scala:56:    def totalBacktracked[T <: ProfilingToken, U](in: TokenReader[T, U]) = in.tokens.foldLeft(0)((sum, token) => sum + token.profile_consumed_backtracking)
+grep:56:ParserFramework/src/main/scala/de/fosd/typechef/parser/AbstractToken.scala:58:    def totalRepeated[T <: ProfilingToken, U](in: TokenReader[T, U]) = in.tokens.foldLeft(0)((sum, token) => sum + token.profile_consumed_replicated())
+grep:57:ParserFramework/src/main/scala/de/fosd/typechef/parser/MultiFeatureParser.scala:431:                    res.toList(ctx).foldLeft(Integer.MAX_VALUE)((_, _) match {
+grep:58:ParserFramework/src/main/scala/de/fosd/typechef/parser/MultiFeatureParser.scala:576:                    val nonEmptyCondition = x.result.filter(x => filterE(x.entry)).map(_.condition).foldLeft(FeatureExprFactory.False)(_ or _)
+grep:59:ParserFramework/src/main/scala/de/fosd/typechef/parser/MultiFeatureParser.scala:669:                    res.toList(ctx).foldLeft(Integer.MAX_VALUE)((_, _) match {
+grep:60:ParserFramework/src/test/scala/de/fosd/typechef/parser/test/RepOptTest.scala:50:        assert(input3.map(_.profile_consumed_replicated).foldLeft(0)(_ + _) == 0)
+grep:61:ParserFramework/src/test/scala/de/fosd/typechef/parser/test/RepOptTest.scala:54:        assert(input.map(_.profile_consumed_replicated).foldLeft(0)(_ + _) == 0)
+grep:62:ParserFramework/src/test/scala/de/fosd/typechef/parser/test/RepOptTest.scala:59:        assert(input2.map(_.profile_consumed_replicated).foldLeft(0)(_ + _) == 0)
+grep:63:ParserFramework/src/test/scala/de/fosd/typechef/parser/test/RepOptTest.scala:63:        assert(input4.map(_.profile_consumed_replicated).foldLeft(0)(_ + _) == 0)
+grep:64:ParserFramework/src/test/scala/de/fosd/typechef/parser/test/RepOptTest.scala:67:        assert(input5.map(_.profile_consumed_replicated).foldLeft(0)(_ + _) == 0)
+grep:65:ParserFramework/src/test/scala/de/fosd/typechef/parser/test/BenchmarkTest.scala:47:        val totalConsumed = in.tokens.foldLeft(0)((sum, token) => sum + token.profile_consumed)
+grep:66:ParserFramework/src/test/scala/de/fosd/typechef/parser/test/BenchmarkTest.scala:48:        val totalBacktracked = in.tokens.foldLeft(0)((sum, token) => sum + token.profile_consumed_backtracking)
+grep:67:ParserFramework/src/test/scala/de/fosd/typechef/parser/test/BenchmarkTest.scala:49:        val totalRepeated = in.tokens.foldLeft(0)((sum, token) => sum + token.profile_consumed_replicated())
+grep:245:FeatureExprLib/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:723:/home/binpang/guojian/reproduce/TypeChef/FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/FeatureExprParser.scala -> foldLeft
+grep:246:FeatureExprLib/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:1830:/home/binpang/guojian/reproduce/TypeChef/FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/CNFHelper.scala -> foldLeft
+grep:247:FeatureExprLib/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:2090:/home/binpang/guojian/reproduce/TypeChef/FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala -> foldLeft
+grep:248:FeatureExprLib/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:2259:/home/binpang/guojian/reproduce/TypeChef/FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExprFactory.scala -> foldLeft
+grep:256:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/FeatureExprParser.scala:61:            case a ~ bs => bs.foldLeft(a)(_ or _)
+grep:257:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/FeatureExprParser.scala:66:            case a ~ bs => bs.foldLeft(a)(_ and _)
+grep:258:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/FeatureExprParser.scala:139:        featuresNames.foldLeft(featureFactory.False)(_ or _)
+grep:259:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/FeatureExprParser.scala:143:            foldLeft(featureFactory.True)(_ and _)
+grep:260:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExprFactory.scala:27:        return disabledFeatures.foldLeft (
+grep:261:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExprFactory.scala:28:            enabledFeatures.foldLeft(True)({(f:FeatureExpr,sf:SingleFeatureExpr) => f.and(sf)})
+grep:262:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/CNFHelper.scala:48:        case Or(literals) => literals.map(getDefinedExpr(_)).foldLeft[Set[DefinedExpr]](Set())(_ + _)
+grep:263:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:456:                            a2.clauses.foldLeft[SATFeatureExpr](a1)(fastAnd(_, _)) //XXX: O(N) set rebuild
+grep:264:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:467:        canonical(clauses.foldLeft[SATFeatureExpr](True)(fastAnd(_, _)))
+grep:265:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:525:                            o2.clauses.foldLeft[SATFeatureExpr](o1)(fastOr(_, _)) //XXX: O(N) set rebuild
+grep:266:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:536:        canonical(clauses.foldLeft[SATFeatureExpr](False)(fastOr(_, _)))
+grep:267:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:709:    override def calcHashCode = primeHashMult * clauses.map(_.hashCode).foldLeft(0)(_ + _)
+grep:268:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:748:    override def calcSize = clauses.foldLeft(0)(_ + _.size)
+grep:269:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:781:        clauses.foldLeft(true)(_ && _.evaluate(selectedFeatures))
+grep:270:FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:894:        clauses.foldLeft(false)(_ || _.evaluate(selectedFeatures))
+grep:271:ConditionalLib/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:327:/home/binpang/guojian/reproduce/TypeChef/ConditionalLib/src/main/scala/de/fosd/typechef/conditional/ConditionalLib.scala -> vfoldLeft
+grep:272:ConditionalLib/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:410:/home/binpang/guojian/reproduce/TypeChef/ConditionalLib/src/main/scala/de/fosd/typechef/conditional/ConditionalMap.scala -> foldLeft
+grep:276:ConditionalLib/src/main/scala/de/fosd/typechef/conditional/ConditionalLib.scala:82:    def vfoldLeft[A, B](list: List[Opt[A]], init: Conditional[B], featureExpr: FeatureExpr, op: (FeatureExpr, B, A) => Conditional[B]): Conditional[B] =
+grep:277:ConditionalLib/src/main/scala/de/fosd/typechef/conditional/ConditionalLib.scala:181:    def conditionalFoldLeftFR = vfoldLeft _
+grep:278:ConditionalLib/src/main/scala/de/fosd/typechef/conditional/ConditionalMap.scala:51:    def whenDefined(name: A): FeatureExpr = entries.getOrElse(name, Seq()).foldLeft(False)(_ or _._1)
+grep:279:ConditionalLib/src/test/scala/de/fosd/typechef/conditional/ConditionalTest.scala:177:        val l = vfoldLeft(list, One("-"), True, (f: FeatureExpr, b: String, a: Int) => {
+grep:280:JavaParser/src/test/scala/de/fost/typechef/parser/java15/ParseMobileMedia.scala:110:            case l: List[_] => l.foldLeft[Int](0)(_ + countCoices(_, ctx))
+CTypeChecker/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:1306:/home/binpang/guojian/reproduce/TypeChef/CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CDeclTyping.scala -> foldLeft
+CTypeChecker/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:1684:/home/binpang/guojian/reproduce/TypeChef/CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CDeclUse.scala -> foldLeft
+CTypeChecker/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:1950:/home/binpang/guojian/reproduce/TypeChef/CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CEnv.scala -> foldLeft
+CTypeChecker/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:2498:/home/binpang/guojian/reproduce/TypeChef/CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CExprTyping.scala -> vfoldLeft
+CTypeChecker/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:3570:/home/binpang/guojian/reproduce/TypeChef/CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CTypes.scala -> foldLeft
+CTypeChecker/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:4074:/home/binpang/guojian/reproduce/TypeChef/CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/linker/CInterface.scala -> foldLeft
+Binary file CTypeChecker/target/scala-2.12/classes/de/fosd/typechef/typesystem/ConditionalVarEnv.class matches
+Binary file CTypeChecker/target/scala-2.12/classes/de/fosd/typechef/typesystem/CEnv$Env.class matches
+Binary file CTypeChecker/target/scala-2.12/classes/de/fosd/typechef/typesystem/IdentityIdHashMap.class matches
+Binary file CTypeChecker/target/scala-2.12/classes/de/fosd/typechef/typesystem/CDeclTyping.class matches
+Binary file CTypeChecker/target/scala-2.12/classes/de/fosd/typechef/typesystem/linker/CInterface.class matches
+Binary file CTypeChecker/target/scala-2.12/classes/de/fosd/typechef/typesystem/linker/CInterface$.class matches
+Binary file CTypeChecker/target/scala-2.12/classes/de/fosd/typechef/typesystem/CExprTyping.class matches
+Binary file CTypeChecker/target/scala-2.12/classes/de/fosd/typechef/typesystem/CDeclUse.class matches
+CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CEnv.scala:33:            updateVarEnv(vars.foldLeft(varEnv)((ve, v) => ve.+(v._1, v._2, v._3, v._4, v._5, scope, v._6)))
+CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CEnv.scala:35:            updateVarEnv(vars.foldLeft(varEnv)((ve, v) => ve.+(v._1, v._2, v._3, v._4, v._5, scope, v._6)))
+CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CEnv.scala:37:            updateVarEnv(vars.foldLeft(varEnv)((ve, v) => ve.+(v._1, v._2, v._3, v._4, kind, scope, linkage)))
+CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CExprTyping.scala:224:                        ConditionalLib.vfoldLeft(opList, et(expr), featureExpr,
+CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CDeclTyping.scala:538:        specifiers.filter(_.entry == specifier).foldLeft(FeatureExprFactory.False)((f, o) => f or o.condition)
+CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/linker/CInterface.scala:288:        getConflicts(that).foldLeft(FeatureExprFactory.True)(_ and _._2)
+CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/linker/CInterface.scala:370:        val formula = featureModel implies pairs.foldLeft(True)((a, b) => a and (b._1 mex b._2))
+CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/linker/CInterface.scala:417:    private def disjointSigFeatureExpr(a: Seq[CSignature]): FeatureExpr = a.foldLeft(False)(_ or _.fexpr)
+CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/linker/CInterface.scala:433:    //            a.foldLeft(False)(_ or _.fexpr) mex b.foldLeft(False)(_ or _.fexpr)
+CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CTypes.scala:605:        v.foldLeft(this)((c, x) => c.+(x._1, x._2, x._3, x._4, x._5, x._6, x._7))
+CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CTypeSystem.scala:492:    //    //            val condition = callerFeature.implies(targets.map(_.feature).foldLeft(FeatureExprFactory.True.not)(_.or(_)))
+CTypeChecker/src/main/scala/de/fosd/typechef/typesystem/CDeclUse.scala:648:                            if (feature.implies(tupleVariableDef.foldLeft(FeatureExprFactory.False)((a, b) => a.or(b._1))).isTautology) {
+Binary file sbt-launch.jar matches
+CRewrite/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:2082:/home/binpang/guojian/reproduce/TypeChef/CRewrite/src/main/scala/de/fosd/typechef/crewrite/MonotoneFW.scala -> foldLeft
+Binary file CRewrite/target/scala-2.12/classes/de/fosd/typechef/crewrite/MonotoneFW.class matches
+CRewrite/src/main/scala/de/fosd/typechef/crewrite/MonotoneFW.scala:211:                fl.foldLeft[L](b)((r: L, s: Opt[AST]) => combinationOperator(r, updateFeatureExprOfMonotoneElements(point(s.entry), s.condition)))
+CRewrite/src/test/scala/de/fosd/typechef/crewrite/CoarseVariability.scala:64://        l.foldLeft(List[Opt[T]]())({
+CParser/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:1375:/home/binpang/guojian/reproduce/TypeChef/CParser/src/main/scala/de/fosd/typechef/parser/c/CASTContext.scala -> foldLeft
+CParser/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:2527:/home/binpang/guojian/reproduce/TypeChef/CParser/src/main/scala/de/fosd/typechef/parser/c/ParserMain.scala -> foldLeft
+CParser/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:2880:/home/binpang/guojian/reproduce/TypeChef/CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala -> foldLeft
+Binary file CParser/target/scala-2.12/classes/de/fosd/typechef/parser/c/ASTEnv.class matches
+Binary file CParser/target/scala-2.12/classes/de/fosd/typechef/parser/c/PrettyPrinter$.class matches
+Binary file CParser/target/scala-2.12/classes/de/fosd/typechef/parser/c/ParserMain.class matches
+CParser/src/main/scala/de/fosd/typechef/parser/c/CASTContext.scala:27:    def featureExpr(elem: Any) = featureSet(elem).foldLeft(FeatureExprFactory.True)(_ and _)
+CParser/src/main/scala/de/fosd/typechef/parser/c/ParserMain.scala:220:        tokens.foldLeft[Set[FeatureExpr]](Set())(_ + _.getFeature).size
+CParser/src/main/scala/de/fosd/typechef/parser/c/ParserMain.scala:248:        case l: List[Any] => l.foldLeft[Int](0)(_ + countCoices(_, ctx))
+CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:128:            list_feature_expr.foldLeft(FeatureExprFactory.True)(_ and _).implies(e.condition).isTautology())
+CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:146:            list_feature_expr.foldLeft(FeatureExprFactory.True)(_ and _).implies(e.condition).isTautology())
+CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:213:            l.drop(1).foldLeft(r)((a, b) => s(a, prettyOpt(b)))
+CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:217:            l.drop(1).foldLeft(r)(s(_, _))
+CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:247:                        list_feature_expr.foldLeft(FeatureExprFactory.True)(_ and _).implies(optExprPair.condition).isTautology()) {
+CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:269:                        foldLeft[Doc]
+CParser/src/main/scala/de/fosd/typechef/parser/c/PrettyPrinter.scala:295:                        foldLeft[Doc]
+ParserFramework/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:243:/home/binpang/guojian/reproduce/TypeChef/ParserFramework/src/main/scala/de/fosd/typechef/parser/AbstractToken.scala -> foldLeft
+ParserFramework/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:525:/home/binpang/guojian/reproduce/TypeChef/ParserFramework/src/main/scala/de/fosd/typechef/parser/MultiFeatureParser.scala -> foldLeft
+Binary file ParserFramework/target/scala-2.12/classes/de/fosd/typechef/parser/MultiFeatureParser$$anon$1.class matches
+Binary file ParserFramework/target/scala-2.12/classes/de/fosd/typechef/parser/MultiFeatureParser$$anon$3.class matches
+Binary file ParserFramework/target/scala-2.12/classes/de/fosd/typechef/parser/MultiFeatureParser$$anon$7.class matches
+Binary file ParserFramework/target/scala-2.12/classes/de/fosd/typechef/parser/ProfilingTokenHelper$.class matches
+ParserFramework/src/main/scala/de/fosd/typechef/parser/AbstractToken.scala:54:    def totalConsumed[T <: ProfilingToken, U](in: TokenReader[T, U]) = in.tokens.foldLeft(0)((sum, token) => sum + token.profile_consumed)
+ParserFramework/src/main/scala/de/fosd/typechef/parser/AbstractToken.scala:56:    def totalBacktracked[T <: ProfilingToken, U](in: TokenReader[T, U]) = in.tokens.foldLeft(0)((sum, token) => sum + token.profile_consumed_backtracking)
+ParserFramework/src/main/scala/de/fosd/typechef/parser/AbstractToken.scala:58:    def totalRepeated[T <: ProfilingToken, U](in: TokenReader[T, U]) = in.tokens.foldLeft(0)((sum, token) => sum + token.profile_consumed_replicated())
+ParserFramework/src/main/scala/de/fosd/typechef/parser/MultiFeatureParser.scala:431:                    res.toList(ctx).foldLeft(Integer.MAX_VALUE)((_, _) match {
+ParserFramework/src/main/scala/de/fosd/typechef/parser/MultiFeatureParser.scala:576:                    val nonEmptyCondition = x.result.filter(x => filterE(x.entry)).map(_.condition).foldLeft(FeatureExprFactory.False)(_ or _)
+ParserFramework/src/main/scala/de/fosd/typechef/parser/MultiFeatureParser.scala:669:                    res.toList(ctx).foldLeft(Integer.MAX_VALUE)((_, _) match {
+ParserFramework/src/test/scala/de/fosd/typechef/parser/test/RepOptTest.scala:50:        assert(input3.map(_.profile_consumed_replicated).foldLeft(0)(_ + _) == 0)
+ParserFramework/src/test/scala/de/fosd/typechef/parser/test/RepOptTest.scala:54:        assert(input.map(_.profile_consumed_replicated).foldLeft(0)(_ + _) == 0)
+ParserFramework/src/test/scala/de/fosd/typechef/parser/test/RepOptTest.scala:59:        assert(input2.map(_.profile_consumed_replicated).foldLeft(0)(_ + _) == 0)
+ParserFramework/src/test/scala/de/fosd/typechef/parser/test/RepOptTest.scala:63:        assert(input4.map(_.profile_consumed_replicated).foldLeft(0)(_ + _) == 0)
+ParserFramework/src/test/scala/de/fosd/typechef/parser/test/RepOptTest.scala:67:        assert(input5.map(_.profile_consumed_replicated).foldLeft(0)(_ + _) == 0)
+ParserFramework/src/test/scala/de/fosd/typechef/parser/test/BenchmarkTest.scala:47:        val totalConsumed = in.tokens.foldLeft(0)((sum, token) => sum + token.profile_consumed)
+ParserFramework/src/test/scala/de/fosd/typechef/parser/test/BenchmarkTest.scala:48:        val totalBacktracked = in.tokens.foldLeft(0)((sum, token) => sum + token.profile_consumed_backtracking)
+ParserFramework/src/test/scala/de/fosd/typechef/parser/test/BenchmarkTest.scala:49:        val totalRepeated = in.tokens.foldLeft(0)((sum, token) => sum + token.profile_consumed_replicated())
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/159a110bb1ce956efdcdbd49fe5b78efce5eced5_dir/de/fosd/typechef/featureexpr/FeatureExprParser.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/159a110bb1ce956efdcdbd49fe5b78efce5eced5_dir/de/fosd/typechef/featureexpr/sat/CNFHelper$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/159a110bb1ce956efdcdbd49fe5b78efce5eced5_dir/de/fosd/typechef/featureexpr/sat/And.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/159a110bb1ce956efdcdbd49fe5b78efce5eced5_dir/de/fosd/typechef/featureexpr/sat/Or.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/159a110bb1ce956efdcdbd49fe5b78efce5eced5_dir/de/fosd/typechef/featureexpr/sat/BinaryLogicConnective.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/159a110bb1ce956efdcdbd49fe5b78efce5eced5_dir/de/fosd/typechef/featureexpr/sat/FExprBuilder$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/159a110bb1ce956efdcdbd49fe5b78efce5eced5_dir/de/fosd/typechef/featureexpr/sat/SATFeatureExprFactory$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/f5568dec75cee2ae9dd5775c5cc6a151a6c28f5a_7c5f25a2d40ea7651452f0f0d1d4c12dabffcb8b/scala/util/parsing/combinator/Parsers.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/tpe/GlbLubs.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/util/WeakHashSet$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/util/NoFile.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/util/WeakHashSet.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/util/Origins.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/util/HashSet$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/util/TableDef$Table.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/util/InternalPositionImpl.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/ReificationSupport$ReificationSupportImpl$SyntacticApplied$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/Trees$TreeContextApiImpl.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/Scopes$Scope$$anon$3.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/TreeGen.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/Scopes$Scope$$anon$2.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/SymbolPairs$Cursor$$anon$2.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/Flags$MapFlags.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/Trees.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/AnnotationCheckers.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/Scopes$Scope.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/Symbols$Symbol$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/Variance$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/SymbolTable.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/internal/Kinds$Kind$StringState.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/io/AbstractFile.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/io/NoAbstractFile.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/52601ee73053d3e80a4d92786582d10cbc81c954_980f68c6ca4fcf9d70c142160108ddfeaee0787a/scala/reflect/api/StandardLiftables$StandardLiftableInstances.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/80e07d1e773f22fe695fbcf92f6eac191a785256_bda2d5a8f31a1d3f343fd870cadaa64c88b085b7/org/kiama/util/ParserUtilities.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/80e07d1e773f22fe695fbcf92f6eac191a785256_bda2d5a8f31a1d3f343fd870cadaa64c88b085b7/org/kiama/output/Filters.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/80e07d1e773f22fe695fbcf92f6eac191a785256_bda2d5a8f31a1d3f343fd870cadaa64c88b085b7/org/kiama/output/PrettyPrinterBase.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/80e07d1e773f22fe695fbcf92f6eac191a785256_bda2d5a8f31a1d3f343fd870cadaa64c88b085b7/org/kiama/rewriting/RewriterCore.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/80e07d1e773f22fe695fbcf92f6eac191a785256_bda2d5a8f31a1d3f343fd870cadaa64c88b085b7/org/kiama/rewriting/Rewriter.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/80e07d1e773f22fe695fbcf92f6eac191a785256_bda2d5a8f31a1d3f343fd870cadaa64c88b085b7/org/kiama/rewriting/NominalRewriter.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/c7a68c33a224acbf6e8baf062b5f94f936eb73bf_dir/de/fosd/typechef/crewrite/MonotoneFW.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/4f05adac3fe75291514c9365647183984d3fc537_ac6f1070ac254cdb491448f1b1f2378f62d6e939/org/bitbucket/inkytonik/dsprofile/Profiler.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/3a3d741ab225028bf580354b6337f6a319090d9a_dir/de/fosd/typechef/parser/MultiFeatureParser$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/3a3d741ab225028bf580354b6337f6a319090d9a_dir/de/fosd/typechef/parser/MultiFeatureParser$$anon$3.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/3a3d741ab225028bf580354b6337f6a319090d9a_dir/de/fosd/typechef/parser/MultiFeatureParser$$anon$7.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/3a3d741ab225028bf580354b6337f6a319090d9a_dir/de/fosd/typechef/parser/ProfilingTokenHelper$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/a501d2d59f7968e31e14719641c8ad2cb4de9e8a_dir/de/fosd/typechef/typesystem/ConditionalVarEnv.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/a501d2d59f7968e31e14719641c8ad2cb4de9e8a_dir/de/fosd/typechef/typesystem/CEnv$Env.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/a501d2d59f7968e31e14719641c8ad2cb4de9e8a_dir/de/fosd/typechef/typesystem/IdentityIdHashMap.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/a501d2d59f7968e31e14719641c8ad2cb4de9e8a_dir/de/fosd/typechef/typesystem/CDeclTyping.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/a501d2d59f7968e31e14719641c8ad2cb4de9e8a_dir/de/fosd/typechef/typesystem/linker/CInterface.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/a501d2d59f7968e31e14719641c8ad2cb4de9e8a_dir/de/fosd/typechef/typesystem/linker/CInterface$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/a501d2d59f7968e31e14719641c8ad2cb4de9e8a_dir/de/fosd/typechef/typesystem/CExprTyping.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/a501d2d59f7968e31e14719641c8ad2cb4de9e8a_dir/de/fosd/typechef/typesystem/CDeclUse.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/TraversableProxyLike.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/TraversableViewLike$AbstractTransformed.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/SeqLike$$anon$2.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/Stream.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/HashMap$HashTrieMap.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/RedBlackTree$TreeIterator.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/StreamViewLike$$anon$13.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/RedBlackTree$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/TreeSet.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/StringOps.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/IntMap$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/LongMap$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/TreeMap.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/Stack.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/RedBlackTree$NList$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/WrappedString.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/List.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/Stream$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/MapProxy$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/StringLike.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/MapProxy$$anon$2.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/SetProxy$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/immutable/Nil.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/SeqViewLike$AbstractTransformed.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ArrayOps$ofShort.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/RedBlackTree$TreeIterator.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/PriorityQueue$ResizableArrayAccess.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ListBuffer.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ArrayOps$ofChar.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ObservableBuffer.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/IndexedSeqLike$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ArrayOps$ofInt.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/BufferProxy$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/LongMap$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ArrayOps$ofByte.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ArrayOps$ofBoolean.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ArrayOps$ofFloat.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ArrayOps$ofLong.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ArrayBuffer.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ArrayOps$ofDouble.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ArraySeq.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/StringBuilder.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/AnyRefMap$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/MapProxy$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/MutableList.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/MapProxy$$anon$2.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/SetProxy$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ArrayStack.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ArrayOps$ofRef.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/WrappedArray.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/IndexedSeqView$AbstractTransformed.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/mutable/ArrayOps$ofUnit.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/TraversableLike$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/generic/TraversableForwarder.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/concurrent/TrieMapIterator.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/concurrent/TrieMap.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/AbstractIterator.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/GenTraversableOnce.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/TraversableOnce.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/TraversableLike.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/Iterator$ConcatIterator.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/AbstractTraversable.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/IterableLike$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/LinearSeqOptimized.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/ParSeqLike$Elements.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/Splitter$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/ParMapLike$$anon$3.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/IterableSplitter$ZippedAll.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/immutable/ParRange.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/immutable/HashMapCombiner.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/immutable/ParRange$ParRangeIterator.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/immutable/Repetition.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/immutable/ParHashSet$ParHashSetIterator.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/immutable/ParHashSet.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/immutable/ParHashMap$ParHashMapIterator.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/immutable/ParHashMap.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/immutable/Repetition$ParIterator.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/immutable/HashSetCombiner.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/immutable/ParVector.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/IterableSplitter$Mapped.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/ParMapLike$DefaultValuesIterable.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/ParMapLike$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/mutable/LazyCombiner.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/mutable/ParHashSet.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/mutable/ParTrieMap.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/mutable/ParArray.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/mutable/ParFlatHashTable$ParFlatHashTableIterator.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/mutable/ParHashMap.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/mutable/ParHashTable$EntryIterator.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/mutable/ParArray$ParArrayIterator.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/ParMapLike$DefaultKeySet.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/BufferSplitter.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/ParMap$WithDefault.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/SeqSplitter$Patched.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/ParIterableLike$Aggregate.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/ParMapLike$$anon$2.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/IterableSplitter$Zipped.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/ParMapLike$$anon$4.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/ParIterableLike.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/IterableSplitter$Taken.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/parallel/IterableSplitter$Appended.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/IndexedSeqOptimized.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/collection/IterableViewLike$AbstractTransformed.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/util/matching/Regex$$anon$4.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/concurrent/Future.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/concurrent/Future$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/bf70c70e4cad772d20cabf3e561cc66447cb6fa5_270fc1cda47bc255f3cd03152ec8c2ed7d224e2b/scala/io/Source.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/e7eb80c228c603ee53a32bd3d041a72ca4969156_dir/de/fosd/typechef/parser/c/ASTEnv.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/e7eb80c228c603ee53a32bd3d041a72ca4969156_dir/de/fosd/typechef/parser/c/PrettyPrinter$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/e7eb80c228c603ee53a32bd3d041a72ca4969156_dir/de/fosd/typechef/parser/c/ParserMain.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/6a17eb6a8ef3aa76d30ad84cd73cd44095790361_e22de3366a698a9f744106fb6dda4335838cf6a7/scala/xml/transform/BasicTransformer.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/6a17eb6a8ef3aa76d30ad84cd73cd44095790361_e22de3366a698a9f744106fb6dda4335838cf6a7/scala/xml/transform/RuleTransformer.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/6a17eb6a8ef3aa76d30ad84cd73cd44095790361_e22de3366a698a9f744106fb6dda4335838cf6a7/scala/xml/parsing/MarkupParser$WithLookAhead$$anon$1.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/6a17eb6a8ef3aa76d30ad84cd73cd44095790361_e22de3366a698a9f744106fb6dda4335838cf6a7/scala/xml/parsing/MarkupParser$WithLookAhead$$anon$2.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/6a17eb6a8ef3aa76d30ad84cd73cd44095790361_e22de3366a698a9f744106fb6dda4335838cf6a7/scala/xml/dtd/impl/BaseBerrySethi.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/6a17eb6a8ef3aa76d30ad84cd73cd44095790361_e22de3366a698a9f744106fb6dda4335838cf6a7/scala/xml/dtd/impl/NondetWordAutom.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/6a17eb6a8ef3aa76d30ad84cd73cd44095790361_e22de3366a698a9f744106fb6dda4335838cf6a7/scala/xml/dtd/ElementValidator.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/6a17eb6a8ef3aa76d30ad84cd73cd44095790361_e22de3366a698a9f744106fb6dda4335838cf6a7/scala/xml/Null.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/6a17eb6a8ef3aa76d30ad84cd73cd44095790361_e22de3366a698a9f744106fb6dda4335838cf6a7/scala/xml/Utility$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/267352a12696383095f101ca0caf45d122229bee_6e7f7a2899587b594342f0d0bfb8bbe89ee1868c/org/rogach/scallop/LazyMap.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/c1657952217cb87f91de580109ff2d4004004cde_00b0b90d2019f628160751030c4201be4afd3b0f/org/bitbucket/inkytonik/dsinfo/DSInfo$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/2107c95954e58c80ddaad8b24abdf2748ec3dcc0_dir/de/fosd/typechef/conditional/ConditionalLib$.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/2107c95954e58c80ddaad8b24abdf2748ec3dcc0_dir/de/fosd/typechef/conditional/ConditionalLib.class matches
+Binary file Frontend/target/streams/$global/assemblyOption/$global/streams/assembly/2107c95954e58c80ddaad8b24abdf2748ec3dcc0_dir/de/fosd/typechef/conditional/ConditionalMap.class matches
+FeatureExprLib/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:723:/home/binpang/guojian/reproduce/TypeChef/FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/FeatureExprParser.scala -> foldLeft
+FeatureExprLib/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:1830:/home/binpang/guojian/reproduce/TypeChef/FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/CNFHelper.scala -> foldLeft
+FeatureExprLib/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:2090:/home/binpang/guojian/reproduce/TypeChef/FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala -> foldLeft
+FeatureExprLib/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:2259:/home/binpang/guojian/reproduce/TypeChef/FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExprFactory.scala -> foldLeft
+Binary file FeatureExprLib/target/scala-2.12/classes/de/fosd/typechef/featureexpr/FeatureExprParser.class matches
+Binary file FeatureExprLib/target/scala-2.12/classes/de/fosd/typechef/featureexpr/sat/CNFHelper$.class matches
+Binary file FeatureExprLib/target/scala-2.12/classes/de/fosd/typechef/featureexpr/sat/And.class matches
+Binary file FeatureExprLib/target/scala-2.12/classes/de/fosd/typechef/featureexpr/sat/Or.class matches
+Binary file FeatureExprLib/target/scala-2.12/classes/de/fosd/typechef/featureexpr/sat/BinaryLogicConnective.class matches
+Binary file FeatureExprLib/target/scala-2.12/classes/de/fosd/typechef/featureexpr/sat/FExprBuilder$.class matches
+Binary file FeatureExprLib/target/scala-2.12/classes/de/fosd/typechef/featureexpr/sat/SATFeatureExprFactory$.class matches
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/FeatureExprParser.scala:61:            case a ~ bs => bs.foldLeft(a)(_ or _)
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/FeatureExprParser.scala:66:            case a ~ bs => bs.foldLeft(a)(_ and _)
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/FeatureExprParser.scala:139:        featuresNames.foldLeft(featureFactory.False)(_ or _)
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/FeatureExprParser.scala:143:            foldLeft(featureFactory.True)(_ and _)
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExprFactory.scala:27:        return disabledFeatures.foldLeft (
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExprFactory.scala:28:            enabledFeatures.foldLeft(True)({(f:FeatureExpr,sf:SingleFeatureExpr) => f.and(sf)})
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/CNFHelper.scala:48:        case Or(literals) => literals.map(getDefinedExpr(_)).foldLeft[Set[DefinedExpr]](Set())(_ + _)
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:456:                            a2.clauses.foldLeft[SATFeatureExpr](a1)(fastAnd(_, _)) //XXX: O(N) set rebuild
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:467:        canonical(clauses.foldLeft[SATFeatureExpr](True)(fastAnd(_, _)))
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:525:                            o2.clauses.foldLeft[SATFeatureExpr](o1)(fastOr(_, _)) //XXX: O(N) set rebuild
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:536:        canonical(clauses.foldLeft[SATFeatureExpr](False)(fastOr(_, _)))
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:709:    override def calcHashCode = primeHashMult * clauses.map(_.hashCode).foldLeft(0)(_ + _)
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:748:    override def calcSize = clauses.foldLeft(0)(_ + _.size)
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:781:        clauses.foldLeft(true)(_ && _.evaluate(selectedFeatures))
+FeatureExprLib/src/main/scala/de/fosd/typechef/featureexpr/sat/SATFeatureExpr.scala:894:        clauses.foldLeft(false)(_ || _.evaluate(selectedFeatures))
+ConditionalLib/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:327:/home/binpang/guojian/reproduce/TypeChef/ConditionalLib/src/main/scala/de/fosd/typechef/conditional/ConditionalLib.scala -> vfoldLeft
+ConditionalLib/target/streams/compile/incCompileSetup/$global/streams/inc_compile_2.12:410:/home/binpang/guojian/reproduce/TypeChef/ConditionalLib/src/main/scala/de/fosd/typechef/conditional/ConditionalMap.scala -> foldLeft
+Binary file ConditionalLib/target/scala-2.12/classes/de/fosd/typechef/conditional/ConditionalLib$.class matches
+Binary file ConditionalLib/target/scala-2.12/classes/de/fosd/typechef/conditional/ConditionalLib.class matches
+Binary file ConditionalLib/target/scala-2.12/classes/de/fosd/typechef/conditional/ConditionalMap.class matches
+ConditionalLib/src/main/scala/de/fosd/typechef/conditional/ConditionalLib.scala:82:    def vfoldLeft[A, B](list: List[Opt[A]], init: Conditional[B], featureExpr: FeatureExpr, op: (FeatureExpr, B, A) => Conditional[B]): Conditional[B] =
+ConditionalLib/src/main/scala/de/fosd/typechef/conditional/ConditionalLib.scala:181:    def conditionalFoldLeftFR = vfoldLeft _
+ConditionalLib/src/main/scala/de/fosd/typechef/conditional/ConditionalMap.scala:51:    def whenDefined(name: A): FeatureExpr = entries.getOrElse(name, Seq()).foldLeft(False)(_ or _._1)
+ConditionalLib/src/test/scala/de/fosd/typechef/conditional/ConditionalTest.scala:177:        val l = vfoldLeft(list, One("-"), True, (f: FeatureExpr, b: String, a: Int) => {
+JavaParser/src/test/scala/de/fost/typechef/parser/java15/ParseMobileMedia.scala:110:            case l: List[_] => l.foldLeft[Int](0)(_ + countCoices(_, ctx))

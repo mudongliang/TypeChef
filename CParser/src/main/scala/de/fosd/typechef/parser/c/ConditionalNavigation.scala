@@ -43,6 +43,16 @@ trait ConditionalNavigation {
         variable(e)
         res
     }
+    def isVariable(e: Product, fearture: FeatureExpr): Boolean = {
+        var res = false
+        val variable = manytd(query[Product] {
+            case Opt(f, _) => if (f != FeatureExprFactory.False && f != FeatureExprFactory.True && f != fearture) res = true
+            case x => res = res
+        })
+
+        variable(e)
+        res
+    }
 
     def filterAllOptElems(e: Product): List[Opt[_]] = {
         def filterAllOptElemsHelper(a: Any): List[Opt[_]] = {

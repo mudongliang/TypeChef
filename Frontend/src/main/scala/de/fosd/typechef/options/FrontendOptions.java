@@ -203,6 +203,10 @@ public class FrontendOptions extends CAnalysisOptions implements ParserOptions {
         return getFiles().iterator().next();
     }
 
+    public String getOutputFilename() {
+        return outputStem;
+    }
+
     public String getInterfaceFilename() {
         return outputStem + ".interface";
     }

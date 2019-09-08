@@ -9,6 +9,9 @@ import de.fosd.typechef.error.{Severity, TypeChefError}
 import de.fosd.typechef.parser.c.FunctionDef
 import de.fosd.typechef.parser.c.TranslationUnit
 import de.fosd.typechef.conditional.Opt
+import java.util.concurrent.locks.Condition
+import java.beans.FeatureDescriptor
+import java.io._
 
 
 sealed abstract class CAnalysisFrontend(tunit: TranslationUnit) extends CFGHelper {
@@ -31,9 +34,9 @@ class CInterAnalysisFrontend(tunit: TranslationUnit, fm: FeatureModel = FeatureE
             case _ => FeatureExprFactory.True
         }
 
-        val allelems = filterAllASTElems[AST](tunit)
-        for (f <- allelems)
-            println(f)
+        // val allelems = filterAllASTElems[AST](tunit)
+        // for (f <- allelems)
+        //     println(f)
 
         for (f <- fdefs) {
             writer.writeMethodGraph(getAllSucc(f, env).map {
@@ -47,16 +50,38 @@ class CInterAnalysisFrontend(tunit: TranslationUnit, fm: FeatureModel = FeatureE
             println(writer.toString)
     }
 
-    def writeFuncs() {
-        //val env = CASTEnv.createASTEnv(tunit)
+    def writeFuncs(outputStem: String) {
+        val inside = new PrintWriter(new File(outputStem + ".inside"))
+        val outside = new PrintWriter(new File(outputStem + ".outside"))
+
+        val env = CASTEnv.createASTEnv(tunit)
         //println(tunit)
-        //println("-------")
+        println("-------")
 
-        val allelems = filterAllASTElems[AST](tunit)
-        for (f <- allelems)
-            println(f)
+        val allelems = filterAllASTElems[FunctionDef](tunit)
+
+        // find Macro include function
+        for (f <- allelems){
+            // println(f)
+            
+            val opt = env.featureExpr(f)
+            if(opt != FeatureExprFactory.True){
+                // println(f"Function Name: ${f.getName}%-60s, cond: $opt")
+                outside.println(f"Function Name: ${f.getName}%-60s, cond: $opt")
+            }
+        }
+
+        // find Macro internal function
+        for (f <- allelems){
+            if(isVariable(f, env.featureExpr(f))){
+                // println(f"Function Name: ${f.getName}%-60s")
+                inside.println(f"Function Name: ${f.getName}%-60s")
+            }
+        }
+
+        inside.close()
+        outside.close()
     }
-
 }
 
 // TODO: refactoring different dataflow analyses into a composite will reduce code: handling of invalid paths, error printing ...
