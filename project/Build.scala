@@ -122,9 +122,10 @@ object Dependencies {
     val scalatest = "org.scalatest" %% "scalatest" % "3.0.1" % "test"
     val scalaparsercombinators = "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.4"
     val scalaxml = "org.scala-lang.modules" %% "scala-xml" % "1.0.6"
+    val json4sNative = "org.json4s" %% "json4s-native" % "3.6.7"
 
-    val testEnvironment = Seq(junit, junitInterface, scalatest, scalacheck)
-    val scala211Libraries = Seq(scalaparsercombinators, scalaxml)
+    val testEnvironment = Seq(junit, junitInterface, scalatest, scalacheck, json4sNative)
+    val scala211Libraries = Seq(scalaparsercombinators, scalaxml, json4sNative)
 }
 
 object VersionGen {

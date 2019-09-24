@@ -13,6 +13,10 @@ import java.util.concurrent.locks.Condition
 import java.beans.FeatureDescriptor
 import java.io._
 
+import scala.collection.mutable.ArrayBuffer
+import org.json4s._
+import org.json4s.native.Serialization
+import org.json4s.native.Serialization.{read, write}
 
 sealed abstract class CAnalysisFrontend(tunit: TranslationUnit) extends CFGHelper {
 
@@ -51,8 +55,11 @@ class CInterAnalysisFrontend(tunit: TranslationUnit, fm: FeatureModel = FeatureE
     }
 
     def writeFuncs(outputStem: String) {
-        val inside = new PrintWriter(new File(outputStem + ".inside"))
-        val outside = new PrintWriter(new File(outputStem + ".outside"))
+
+        val inside = new PrintWriter(new File(outputStem + ".inside.json"))
+        val outside = new PrintWriter(new File(outputStem + ".outside.json"))
+        val allfunc = new PrintWriter(new File(outputStem + ".allfunc.json"))
+        implicit val formats = Serialization.formats(NoTypeHints)
 
         val env = CASTEnv.createASTEnv(tunit)
         //println(tunit)
@@ -60,27 +67,46 @@ class CInterAnalysisFrontend(tunit: TranslationUnit, fm: FeatureModel = FeatureE
 
         val allelems = filterAllASTElems[FunctionDef](tunit)
 
+        
+        val arr = ArrayBuffer[Map[_,_]]()
+        val allfuncs = ArrayBuffer[Map[_,_]]()
         // find Macro include function
         for (f <- allelems){
             // println(f)
-            
+            // val arr = new ArrayBuffer[Map[String, String]]()
+            val data = new StringBuilder
             val opt = env.featureExpr(f)
+            allfuncs += Map("filename" -> f.getFile.get.toString , "function" -> f.getName.toString, "Cond" -> opt.toString)
             if(opt != FeatureExprFactory.True){
                 // println(f"Function Name: ${f.getName}%-60s, cond: $opt")
-                outside.println(f"Function Name: ${f.getName}%-60s, cond: $opt")
+                // outside.println(f"${f.getFile.get}:${f.getName}%-40s, cond: $opt")
+                arr += Map("filename" -> f.getFile.get.toString , "function" -> f.getName.toString, "Cond" -> opt.toString)
             }
         }
+        val outsideData = Map(outputStem -> arr)
+        // outside.write(JSONObject(m).toString())
+        outside.println(write(outsideData))
+        allfunc.println(write(Map(outputStem -> allfuncs)))
 
+        arr.clear()
         // find Macro internal function
         for (f <- allelems){
+            val data =  new StringBuilder
             if(isVariable(f, env.featureExpr(f))){
-                // println(f"Function Name: ${f.getName}%-60s")
-                inside.println(f"Function Name: ${f.getName}%-60s")
+                // inside.println(f"${f.getFile.get}:${f.getName}")
+                val conds = filterAllFeatureExpr(f).distinct
+                val data = new StringBuilder
+
+                conds.addString(data, ",")
+                arr += Map("filename" -> f.getFile.get.toString , "function" -> f.getName.toString, "Cond" -> f"[$data]")
             }
         }
+        val insideData = Map(outputStem -> arr)
+        inside.println(write(insideData))
 
         inside.close()
         outside.close()
+        allfunc.close()
     }
 }
 
@@ -415,5 +441,29 @@ class CIntraAnalysisFrontend(tunit: TranslationUnit, ts: CTypeSystemFrontend wit
             }
         }
         err
+    }
+
+    // write intra CFG
+
+    def writeCFG(title: String, writer: CFGWriter) {
+
+        val env = CASTEnv.createASTEnv(tunit)
+        writer.writeHeader(title)
+
+        def lookupFExpr(e: AST): FeatureExpr = e match {
+            case o if env.isKnown(o) => env.featureExpr(o)
+            case _ => FeatureExprFactory.True
+        }
+
+        for (f <- fdefs) {
+            writer.writeMethodGraph(getAllSucc(f, env).map {
+                x => (x._1, x._2.distinct.filter { y => y.condition.isSatisfiable(fm)}) // filter duplicates and wrong succs
+            }, lookupFExpr, f.declarator.getName)
+        }
+        writer.writeFooter()
+        writer.close()
+
+        if (writer.isInstanceOf[StringWriter])
+            println(writer.toString)
     }
 }

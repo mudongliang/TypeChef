@@ -22,6 +22,7 @@ public class FrontendOptions extends CAnalysisOptions implements ParserOptions {
             decluse = false,
             writeInterface = false,
             dumpcfg = false,
+            dumpintracfg = false,
             dumpfuncs = false,
             serializeAST = false,
             reuseAST = false,
@@ -44,6 +45,7 @@ public class FrontendOptions extends CAnalysisOptions implements ParserOptions {
     private final static char F_WRITEPI = Options.genOptionId();
     private final static char F_DEBUGINTERFACE = Options.genOptionId();
     private final static char F_DUMPCFG = Options.genOptionId();
+    private final static char F_DUMPINTRACFG = Options.genOptionId();
     private final static char F_DUMPFUNCS = Options.genOptionId();
     private final static char F_SERIALIZEAST = Options.genOptionId();
     private final static char F_REUSEAST = Options.genOptionId();
@@ -75,6 +77,9 @@ public class FrontendOptions extends CAnalysisOptions implements ParserOptions {
                         "Lex, parse, type check, and create interfaces."),
 
                 new Option("dumpcfg", LongOpt.NO_ARGUMENT, F_DUMPCFG, null,
+                        "Lex, parse, and dump control flow graph"),
+
+                new Option("dumpintracfg", LongOpt.NO_ARGUMENT, F_DUMPINTRACFG, null,
                         "Lex, parse, and dump control flow graph"),
 
                 new Option("dumpfuncs", LongOpt.NO_ARGUMENT, F_DUMPFUNCS, null,
@@ -140,6 +145,8 @@ public class FrontendOptions extends CAnalysisOptions implements ParserOptions {
             parse = typecheck = writeInterface = true;
         } else if (c == F_DUMPCFG) {
             parse = dumpcfg = true;
+        } else if (c == F_DUMPINTRACFG) {
+            parse = dumpintracfg = true;
         } else if (c == F_DUMPFUNCS) {
             parse = dumpfuncs = true;
         } else if (c == F_SERIALIZEAST) {
@@ -261,6 +268,14 @@ public class FrontendOptions extends CAnalysisOptions implements ParserOptions {
 
     public String getCCFGDotFilename() {
         return outputStem + ".cfg.dot";
+    }
+
+    public String getIntraCFGFilename() {
+        return outputStem + ".intra.cfg";
+    }
+
+    public String getIntraCFGDotFilename() {
+        return outputStem + ".intra.cfg.dot";
     }
 
     public boolean printParserStatistics() {

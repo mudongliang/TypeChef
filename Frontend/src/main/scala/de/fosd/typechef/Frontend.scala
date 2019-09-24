@@ -188,8 +188,18 @@ object Frontend extends EnforceTreeHelper {
                     val dotwriter = new DotGraph(new FileWriter(new File(opt.getCCFGDotFilename)))
                     cf.writeCFG(opt.getFile, new ComposedWriter(List(dotwriter, writer)))
                 }
+                if (opt.dumpintracfg) {
+                    println("#intra cfg")
+                    stopWatch.start("dumpIntraCFG")
+
+                    //run without feature model, because otherwise too expensive runtimes in systems such as linux
+                    val cf = new CIntraAnalysisFrontend(ast, ts.asInstanceOf[CTypeSystemFrontend with CTypeCache with CDeclUse])
+                    val writer = new CFGCSVWriter(new FileWriter(new File(opt.getIntraCFGFilename)))
+                    val dotwriter = new DotGraph(new FileWriter(new File(opt.getIntraCFGDotFilename)))
+                    cf.writeCFG(opt.getFile, new ComposedWriter(List(dotwriter, writer)))
+                }
                 if (opt.dumpfuncs) {
-                    println("#call graph")
+                    println("#dump function")
                     stopWatch.start("dumpFuncs")
 
                     //run without feature model, because otherwise too expensive runtimes in systems such as linux

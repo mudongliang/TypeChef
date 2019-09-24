@@ -28,6 +28,15 @@
     <orderEntry type="module" module-name="ParserFramework" />
     <orderEntry type="module" module-name="CParser" />
     <orderEntry type="module" module-name="CTypeChecker" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib_managed/scala_2.9.0/compile/json4s-native_3.6.7.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 
