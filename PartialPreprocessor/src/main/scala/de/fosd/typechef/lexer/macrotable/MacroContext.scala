@@ -77,6 +77,7 @@ class MacroContext[T](knownMacros: Map[String, Macro[T]], var cnfCache: Map[Stri
         val feature = infeature //.resolveToExternal()
         val newMC = new MacroContext(
                 knownMacros.get(name) match {
+                    case _ if (macroFilter.flagFilter(name)) => knownMacros
                     case Some(mcr) => knownMacros.updated(name, mcr.addNewAlternative(new MacroExpansion[T](feature, other)))
                     case None => {
                         //XXX createDefinedExternal should simply check
@@ -97,6 +98,7 @@ class MacroContext[T](knownMacros: Map[String, Macro[T]], var cnfCache: Map[Stri
         val feature = infeature //.resolveToExternal()
         new MacroContext(
             knownMacros.get(name) match {
+                case _ if (macroFilter.flagFilter(name)) => knownMacros
                 case Some(mcr) => knownMacros.updated(name, mcr.andNot(feature))
                 case None =>
                     val initialFeatureExpr = if (macroFilter.flagFilter(name))

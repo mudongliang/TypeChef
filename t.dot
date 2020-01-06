@@ -1,0 +1,23 @@
+digraph "/home/binpang/guojian/temp/test.c" {
+node [shape=record];
+"1397381784"[label="{{Stmt\ 12:\ return\ a;}|True}", color="black", fontname="Calibri", style="filled", fillcolor="white"];
+"737945227"[label="{{Function\ 3:\ f}|True}", color="blue", fontname="Calibri", style="filled", fillcolor="white"];
+"1397381784" -> "737945227"[label="1", color="black", style="setlinewidth(1)"];
+"690052870"[label="{{Stmt\ 10:\ (a\ =\ 2);}|!def(A)}", color="black", fontname="Calibri", style="filled", fillcolor="#CD5200"];
+"690052870" -> "1397381784"[label="!definedEx(A)", color="red", style="setlinewidth(1)"];
+"1567705314"[label="{{Stmt\ 7:\ \l#if\ definedEx(A)\lin}|def(A)}", color="black", fontname="Calibri", style="filled", fillcolor="#CD5200"];
+"1567705314" -> "1397381784"[label="definedEx(A)", color="red", style="setlinewidth(1)"];
+"9797126"[label="{{Stmt\ 9:\ \l#if\ definedEx(A)\lin}|!def(A)}", color="black", fontname="Calibri", style="filled", fillcolor="#CD5200"];
+"9797126" -> "690052870"[label="!definedEx(A)", color="red", style="setlinewidth(1)"];
+"687059528"[label="{{Stmt\ 6:\ int\ \l#if\ definedEx(A}|def(A)}", color="black", fontname="Calibri", style="filled", fillcolor="#CD5200"];
+"687059528" -> "1567705314"[label="definedEx(A)", color="red", style="setlinewidth(1)"];
+"737945227" -> "687059528"[label="definedEx(A)", color="red", style="setlinewidth(1)"];
+"737945227" -> "9797126"[label="!definedEx(A)", color="red", style="setlinewidth(1)"];
+"1855026648"[label="{{Stmt\ 17:\ return\ 0;}|True}", color="black", fontname="Calibri", style="filled", fillcolor="white"];
+"806511723"[label="{{Function\ 15:\ main}|True}", color="blue", fontname="Calibri", style="filled", fillcolor="white"];
+"1855026648" -> "806511723"[label="1", color="black", style="setlinewidth(1)"];
+"121167003"[label="{{Stmt\ 16:\ f();}|True}", color="black", fontname="Calibri", style="filled", fillcolor="white"];
+"121167003" -> "737945227"[label="1", color="black", style="setlinewidth(1)"];
+"121167003" -> "1855026648"[label="1", color="black", style="setlinewidth(1)"];
+"806511723" -> "121167003"[label="1", color="black", style="setlinewidth(1)"];
+}

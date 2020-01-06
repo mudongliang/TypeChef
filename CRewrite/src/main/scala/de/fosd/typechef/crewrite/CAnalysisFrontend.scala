@@ -72,6 +72,7 @@ class CInterAnalysisFrontend(tunit: TranslationUnit, fm: FeatureModel = FeatureE
         val allfuncs = ArrayBuffer[Map[_,_]]()
         // find Macro include function
         for (f <- allelems){
+            println(f"${f.getName.toString}:${f.getPositionFrom}")
             // println(f)
             // val arr = new ArrayBuffer[Map[String, String]]()
             val data = new StringBuilder
